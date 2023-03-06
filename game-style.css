@@ -1,0 +1,135 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+  width: 100%;
+}
+p {
+  display: inline-block;
+}
+
+.config-button {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+}
+.control-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.slide-container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.slide-container p {
+  display: block;
+  align-items: center;
+}
+.play-area {
+  display: flex;
+  width: 100%;
+}
+#canvas-container {
+  background-image: url(./assets/aoe-background.jpg);
+  background-size: 100%;
+  object-fit: fill;
+  display: flex;
+  justify-content: center;
+}
+.canvas-size-helper {
+  flex: 3 1 0;
+}
+.canvas-size-helper2 {
+  flex: 1 1 0;
+}
+.marquee {
+  width: 50%;
+}
+.marquee ul {
+  overflow: hidden;
+  height: 3rem;
+  /* outline: 1px solid red; */
+  display: block;
+  position: relative;
+}
+.marquee li {
+  height: 1.5rem;
+  /* outline: 1px solid black; */
+  display: block;
+  position: absolute;
+  left: 0px;
+}
+
+.cards-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: auto;
+  height: 50vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 768px) {
+  .cards-panel {
+    flex-direction: row;
+    overflow-x: scroll;
+    height: auto;
+    margin-top: 20px !important;
+    width: 90vw !important;
+    margin-left: 5vw;
+  }
+  .card-outer-border {
+    min-width: 100px;
+  }
+}
+.card-outer-border {
+  margin: 20px;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+/* cards panel style*/
+.card-top {
+  text-transform: uppercase;
+  font-size: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  top: 85%;
+  left: 25%;
+  width: 50%;
+  height: 20px;
+  border: 1px solid black;
+  z-index: 3;
+}
+.card-holder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: calc(100%);
+  width: calc(100%);
+  border: 5px solid green;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.card-holder img {
+  height: 100px;
+  width: 100px;
+}

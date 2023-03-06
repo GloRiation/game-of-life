@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game-style.css" />
+    <link rel="stylesheet" href="common-style.css" />
+    <title>Game of Life</title>
+  </head>
+  <body>
+    <div id="nav-menu"></div>
+    <div class="config-button">
+      <button id="start-btn">START</button>
+      <button id="stop-btn">STOP</button>
+      <button id="reset-btn">RESET</button>
+      <button id="tick-btn">tick</button>
+      <button id="male-btn">MALE</button>
+      <button id="female-btn">FEMALE</button>
+    </div>
+    <div class="control-group">
+      
+      <div class="slide-container">
+          <span>fps:</span>
+          <span class="fps-slider-value"></span>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="5"
+            class="slider"
+            id="fps-slider"
+          />
+          <div class="frame-count"></div>
+        </div>
+        <div class="marquee">
+          <ul>
+            <li>Baby: <span class="stat"></span></li>
+            <li>Male: <span class="stat"></span></li>
+            <li>Female: <span class="stat"></span></li>
+          </ul>
+        </div>
+      </div>    
+      
+    </div>
+
+    <div class="play-area row row-cols-1 row-cols-md-2">
+      <div id="canvas-container" class="col-md-10"></div>
+
+      <div class="cards-panel col-md-2">
+        <div class="card-outer-border" data-type="default">
+          <div class="card-top">Default</div>
+          <div class="card-holder">
+            <img src="../assets/default.png" alt="Image" />
+          </div>
+        </div>
+        <div class="card-outer-border" data-type="block">
+          <div class="card-top">Still life</div>
+          <div class="card-holder">
+            <img
+              src="../assets/132px-Game_of_life_block_with_border.svg.png"
+              alt="Image"
+            />
+          </div>
+        </div>
+        <div class="card-outer-border" data-type="loaf">
+          <div class="card-top">Still life</div>
+          <div class="card-holder">
+            <img src="../assets/196px-Game_of_life_loaf.svg.png" alt="Image" />
+          </div>
+        </div>
+        <div class="card-outer-border" data-type="blinker">
+          <div class="card-top">oscillator</div>
+          <div class="card-holder">
+            <img src="../assets/Game_of_life_blinker.gif" alt="Image" />
+          </div>
+        </div>
+        <div class="card-outer-border" data-type="glider">
+          <div class="card-top">spaceship</div>
+          <div class="card-holder">
+            <img src="../assets/Game_of_life_animated_glider.gif" alt="Image" />
+          </div>
+        </div>
+        <div class="card-outer-border" data-type="default">
+          <div class="card-top">Default</div>
+          <div class="card-holder">
+            <img src="../assets/default.png" alt="Image" />
+          </div>
+        </div>
+        <div class="card-outer-border" data-type="block">
+          <div class="card-top">Still life</div>
+          <div class="card-holder">
+            <img
+              src="../assets/132px-Game_of_life_block_with_border.svg.png"
+              alt="Image"
+            />
+          </div>
+        </div>
+        <div class="card-outer-border" data-type="loaf">
+          <div class="card-top">Still life</div>
+          <div class="card-holder">
+            <img src="../assets/196px-Game_of_life_loaf.svg.png" alt="Image" />
+          </div>
+        </div>
+        <div class="card-outer-border" data-type="blinker">
+          <div class="card-top">oscillator</div>
+          <div class="card-holder">
+            <img src="../assets/Game_of_life_blinker.gif" alt="Image" />
+          </div>
+        </div>
+        <div class="card-outer-border" data-type="glider">
+          <div class="card-top">spaceship</div>
+          <div class="card-holder">
+            <img src="../assets/Game_of_life_animated_glider.gif" alt="Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
+    "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="game.js"></script>
+    <script src="request-navbar.js"></script>
+  </body>
+</html>
